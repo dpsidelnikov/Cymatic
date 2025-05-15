@@ -328,8 +328,22 @@ setupControls({
                     PARAMS.patternMixY,
                 );
                 await audio.startAudio(freq, PARAMS.volume);
+                // Simulate space key press to form the pattern
+                if (audio.isAudioEnabled()) {
+                    audio.handleKeyDown({ key: 'SPACE' });
+                    // Automatically release after 0.7 seconds
+                    setTimeout(() => {
+                        if (audio.isAudioEnabled()) {
+                            audio.handleKeyUp({ key: 'SPACE' });
+                        }
+                    }, 450);
+                }
             } else {
                 audio.stopAudio();
+                // Release space key when sound is toggled off
+                if (audio.isAudioEnabled()) {
+                    audio.handleKeyUp({ key: 'SPACE' });
+                }
             }
         } catch (error) {
             console.error('Error handling audio state change:', error);

@@ -1,23 +1,26 @@
 {
-  "name": "cymatic",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.26.0",
-    "eslint": "^9.26.0",
-    "eslint-config-prettier": "^10.1.5",
-    "prettier": "^3.5.3",
-    "vite": "^6.3.5"
-  },
-  "dependencies": {
-    "three": "^0.176.0",
-    "tone": "^15.1.22",
-    "tweakpane": "^4.0.5"
-  }
+    "name": "cymatic",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.26.0",
+        "eslint": "^9.26.0",
+        "eslint-config-prettier": "^10.1.5",
+        "gh-pages": "^6.3.0",
+        "prettier": "^3.5.3",
+        "vite": "^6.3.5"
+    },
+    "dependencies": {
+        "three": "^0.176.0",
+        "tone": "^15.1.22",
+        "tweakpane": "^4.0.5"
+    }
 }
