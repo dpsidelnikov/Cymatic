@@ -1,0 +1,42 @@
+/* Reset margin, padding, and box sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* Ensure html and body take up full screen */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #697080; /* Tailwind gray-900 */
+    font-family: 'Inter', sans-serif;
+    color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+/* Ensure the container fills the viewport and doesn't scroll */
+#simulationContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+    z-index: 0;
+}
+
+/* Make sure canvas fills its parent */
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
