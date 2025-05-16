@@ -54,10 +54,10 @@ function calculateFrequency(m, n, a, b) {
  */
 function calculatePointSize() {
     const container = document.getElementById('simulationContainer');
-    if (!container) return 3.0; // fallback to default
+    if (!container) return 1.0; // fallback to default
 
     const size = Math.max(container.clientWidth, container.clientHeight);
-    const baseSize = 3.0;
+    const baseSize = 1.0;
     return (baseSize * size) / 1000; // Normalized to a 1000px reference
 }
 
